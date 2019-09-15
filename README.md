@@ -28,8 +28,26 @@ https://circleci.com/gh/organizations/<your-organizations>/settings#security
 $ circleci namespace create enokawa github enokawa
 ```
 
-## Create orb
+## Create Orb
 
 ```shell
 $ circleci orb create enokawa/sample-orb
+```
+
+## Create `orb.yml`
+
+```shell
+$ vim orb.yml
+```
+
+## Validate `orb.yml`
+
+```shell
+$ circleci orb validate orb.yml
+```
+
+## Publish Orb
+
+```shell
+$ circleci orb publish orb.yml enokawa/sample-orb@0.0.1
 ```

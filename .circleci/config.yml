@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+  greet-test: enokawa/sample-orb@0.0.1
+
+jobs:
+  build:
+    docker:
+    - image: bash
+    steps:
+    - run: "echo 'print username'"
+    - sample-orb/hello:
+        username: "enokawa"
+
+workflows:
+  main:
+    jobs:
+    - build

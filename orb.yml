@@ -1,0 +1,16 @@
+version: 2.1
+description: enokawa/sample-orb
+
+commands:
+  hello:
+    description: sample-orb
+    parameters:
+      username:
+        type: string
+        description: your name
+    steps:
+      - run: 
+          name: sample-orb
+          command: |
+            USERNAME="$(echo << parameters.username >>)"
+            echo "Hello ${USERNAME}"
