@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  greet-test: enokawa/sample-orb@0.0.1
+  sample-orb: enokawa/sample-orb@0.0.1
 
 jobs:
   build:
@@ -16,3 +16,4 @@ workflows:
   main:
     jobs:
     - build
+
